@@ -1,0 +1,32 @@
+---
+import Logo from "../assets/alpilogo.svg";
+---
+
+<header
+  class="w-full flex items-center justify-center border-b-2 border-black/10"
+>
+  <div
+    class="flex justify-between items-center w-full max-w-[80rem] relative h-20 px-6"
+  >
+    <a href="/kontakt">KONTAKT</a>
+    <a
+      href="/"
+      class="absolute left-1/2 transform -translate-x-1/2"
+      aria-label="Alpi"
+    >
+      <Logo width="78" height="78" />
+    </a>
+    <a href="/meni">MENI</a>
+  </div>
+</header>
+
+<style>
+  a {
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    &:hover {
+      color: var(--color-blue-main);
+    }
+  }
+</style>
