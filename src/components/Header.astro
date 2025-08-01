@@ -4,10 +4,10 @@ import Logo from "../assets/alpilogo.svg";
 
 <header
   id="header"
-  class="w-full flex transition-all items-center h-20 justify-center border-b-2 border-black/10 fixed top-0 left-0 z-[9999]"
+  class="w-full flex transition-all items-center h-20 justify-center border-b-2 fixed top-0 left-0 z-[9999]"
 >
   <div
-    class="flex justify-between items-center w-full max-w-[80rem] relative px-6"
+    class="flex justify-between items-center w-full relative px-6 md:px-12 lg:px-24"
   >
     <a href="/kontakt">KONTAKT</a>
     <a
@@ -38,6 +38,7 @@ import Logo from "../assets/alpilogo.svg";
   }
 
   header {
+    margin-top: 1rem;
     height: 8rem;
     background-color: transparent;
     color: white;
@@ -45,10 +46,11 @@ import Logo from "../assets/alpilogo.svg";
   }
 
   header.scrolled {
+    margin-top: 0;
     height: 5rem;
     background-color: white;
     color: black;
-    border-color: hsla(0, 0%, 0%, 10%);
+    border-color: var(--color-blue-light);
   }
 
   .logo {
@@ -60,10 +62,14 @@ import Logo from "../assets/alpilogo.svg";
   }
 </style>
 
-<script>
-  const header = document.getElementById("header");
+<script is:inline>
+  function handleScroll() {
+    const header = document.getElementById("header");
+    window.addEventListener("scroll", () => {
+      header?.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  }
 
-  window.addEventListener("scroll", () => {
-    header?.classList.toggle("scrolled", window.scrollY > 50);
-  });
+  document.addEventListener("astro:after-swap", handleScroll);
+  handleScroll();
 </script>

@@ -7,9 +7,9 @@ const currentYear = new Date().getFullYear();
 <footer class="w-full flex flex-col justify-center items-center">
   <div class="bg-blue-main text-white w-full">
     <div class="max-w-[80rem] w-full mx-auto px-6 flex flex-col">
-      <div class="flex flex-col md:flex-row justify-between gap-4 pt-8 pb-4">
+      <div class="flex flex-col md:flex-row justify-between gap-4 pt-16 pb-16">
         <div>
-          <h2 class="text-4xl">ALPI</h2>
+          <h2 class="text-4xl heading">ALPI</h2>
           <p class="text-2xl">NAJBOLJE PLJESKAVICE U ŽITIŠTU</p>
         </div>
         <p class="opacity-80 md:text-end">
@@ -17,16 +17,10 @@ const currentYear = new Date().getFullYear();
           />kontakt@alpi.rs
         </p>
       </div>
-      <Mountains width={100} class="transform translate-y-[1px] self-end" />
+      <Mountains width={100} class="transform translate-y-[1px] self-end text-blue-light" />
     </div>
   </div>
   <div class="max-w-[80rem] w-full mx-auto px-6 pt-2 pb-8">
     <small>© {currentYear} Alpi.</small>
   </div>
 </footer>
-
-<style>
-  h2 {
-    font-family: 'Barlow Condensed';
-  }
-</style>

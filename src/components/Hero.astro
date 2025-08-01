@@ -2,22 +2,26 @@
 import { Image } from "astro:assets";
 import Mountains from "../assets/alpiicon.svg";
 import Punjena from "../assets/food/punjena.png";
+import MountainRange from "../assets/mountainrange.svg";
 ---
 
-<section class="w-full bg-blue-main mb-16 relative">
+<section class="w-ful relative mt-2 mx-2 md:mt-4 md:mx-3 ">
   <div
-    class="w-full justify-between gap-2 md:gap-0 mx-auto max-w-[80rem] pt-36 pb-8 px-6 text-white flex flex-col  font-[Barlow_Condensed]"
+    class="w-full justify-between gap-2 md:gap-0 mx-auto max-w-[80rem] pt-36 pb-20 px-4 md:pb-40 md:px-6 text-white flex flex-col font-[Barlow_Condensed]"
   >
     <div>
       <div>
         <h1 class="md:text-9xl text-7xl text-left">PUNJENA</h1>
-        <span class="block text-3xl md:text-5xl font-medium">PUNJENA SA DIMLJENOM SLANINON I KAČKAVALJEM</span>
-        <span class="price text-5xl md:text-7xl font-bold italic">460</span><span
-          class="font-bold text-3xl md:text-5xl italic">DIN</span
+        <span class="block text-3xl md:text-5xl font-medium"
+          >PUNJENA SA DIMLJENOM SLANINON I KAČKAVALJEM</span
         >
+        <span class="price text-5xl md:text-7xl font-bold italic">460</span
+        ><span class="font-bold text-3xl md:text-5xl italic">DIN</span>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row-reverse md:justify-between w-full gap-8">
+    <div
+      class="flex flex-col md:flex-row-reverse md:justify-between w-full gap-8"
+    >
       <Image
         src={Punjena}
         alt="Punjena pljeskavica"
@@ -27,12 +31,12 @@ import Punjena from "../assets/food/punjena.png";
       <div class="flex flex-col gap-2 md:flex-row-reverse md:self-end">
         <a
           href="tel:+381643553694"
-          class="hover:opacity-50 px-8 py-4  text-center text-xl font-semibold border-white border-2 rounded-full"
+          class="hover:opacity-50 px-8 py-4 text-center text-xl font-semibold border-white border-2 rounded-full"
           >POZOVI NAS</a
         >
         <a
           href="/meni"
-          class="px-8 py-4 hover:opacity-50  text-center text-xl font-semibold bg-white text-blue-main border-white border-2  rounded-full"
+          class="px-8 py-4 hover:opacity-50 text-center text-xl font-semibold bg-white text-blue-main border-white border-2 rounded-full"
           >POGLEDAJ MENI</a
         >
       </div>
@@ -51,5 +55,6 @@ import Punjena from "../assets/food/punjena.png";
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.2);
   }
 </style>

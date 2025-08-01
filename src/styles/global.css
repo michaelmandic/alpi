@@ -2,11 +2,9 @@
 
 @theme {
   --color-blue-main: #006FFF;
+  --color-blue-light: hsl(214, 100%, 95%);
 }
 
-@view-transition {
-  navigation: auto;
-}
 
 
 html,
@@ -25,13 +23,8 @@ body {
   font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Barlow", sans-serif;
+.heading {
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
@@ -39,4 +32,3 @@ h6 {
 a {
   @apply transition-all;
 }
-
