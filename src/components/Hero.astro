@@ -1,8 +1,59 @@
 ---
-
+import { Image } from "astro:assets";
+import Mountains from "../assets/alpiicon.svg";
+import Punjena from "../assets/food/punjena.png";
 ---
 
-<section class="w-full bg-blue-main">
-  <div class="w-full mx-auto max-w-[80rem] h-150">
+<section class="w-full bg-blue-main mb-12 relative">
+  <div
+    class="w-full justify-between gap-20 md:gap-0 mx-auto max-w-[80rem] pt-4 pb-6 px-6 text-white flex flex-col  font-[Barlow_Condensed]"
+  >
+    <div>
+      <div>
+        <h1 class="md:text-9xl text-7xl text-left">PUNJENA</h1>
+        <span class="block text-3xl md:text-5xl font-medium">PUNJENA SA DIMLJENOM SLANINON I KAČKAVALJEM</span>
+        <span class="price text-5xl md:text-7xl font-bold italic">460</span><span
+          class="font-bold text-3xl md:text-5xl italic">DIN</span
+        >
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row-reverse md:justify-between w-full gap-8">
+      <Image
+        src={Punjena}
+        alt="Punjena pljeskavica"
+        height="300"
+        class="mx-auto md:mx-0"
+      />
+      <div class="flex flex-col gap-2 md:flex-row-reverse md:self-end">
+        <a
+          href="tel:+381643553694"
+          class="hover:opacity-50 px-4 py-2  text-center text-2xl font-semibold border-white border-2 rounded-lg"
+          >POZOVI NAS</a
+        >
+        <a
+          href="/meni"
+          class="px-4 py-2 hover:opacity-50  text-center text-2xl font-semibold bg-white text-blue-main border-white border-2 rounded-lg"
+          >POGLEDAJ MENI</a
+        >
+      </div>
+    </div>
   </div>
+  <!-- <Mountains
+    width="100%"
+    class="block absolute max-w-[20rem] translate-y-[0.5px] right-1/2 translate-x-1/2 sm:translate-x-0 sm:right-16 bottom-0 transform text-white"
+  /> -->
 </section>
+
+<style>
+  h1 {
+    font-family: "Barlow Condensed";
+    font-weight: 900;
+  }
+
+  section {
+    background-image: url("./backgrounds/bluebrick.webp");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+</style>

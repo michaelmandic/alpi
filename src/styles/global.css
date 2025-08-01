@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-blue-main: #00A0DF;
+  --color-blue-main: #006FFF;
 }
 
 @view-transition {
@@ -9,6 +9,11 @@
 }
 
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -20,22 +25,18 @@ body {
   font-style: normal;
 }
 
-h1 {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 700;
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
   font-style: normal;
 }
 
 a {
   @apply transition-all;
 }
+
