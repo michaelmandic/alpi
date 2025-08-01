@@ -3,10 +3,11 @@ import Logo from "../assets/alpilogo.svg";
 ---
 
 <header
-  class="w-full flex items-center justify-center border-b-2 border-black/10 fixed top-0 left-0 z-[9999] bg-white"
+  id="header"
+  class="w-full flex transition-all items-center h-20 justify-center border-b-2 border-black/10 fixed top-0 left-0 z-[9999]"
 >
   <div
-    class="flex justify-between items-center w-full max-w-[80rem] relative h-20 px-6"
+    class="flex justify-between items-center w-full max-w-[80rem] relative px-6"
   >
     <a href="/kontakt">KONTAKT</a>
     <a
@@ -14,11 +15,7 @@ import Logo from "../assets/alpilogo.svg";
       class="absolute left-1/2 transform -translate-x-1/2 group"
       aria-label="Alpi"
     >
-      <Logo
-        width="78"
-        height="78"
-        class="group-hover:opacity-50 transition-all"
-      />
+      <Logo class="logo group-hover:opacity-50 transition-all" />
     </a>
     <a href="/meni">MENI</a>
   </div>
@@ -30,7 +27,43 @@ import Logo from "../assets/alpilogo.svg";
     font-weight: 500;
 
     &:hover {
+      opacity: 50%;
+    }
+  }
+
+  .scrolled a {
+    &:hover {
       color: var(--color-blue-main);
     }
   }
+
+  header {
+    height: 8rem;
+    background-color: transparent;
+    color: white;
+    border-color: hsla(0, 0%, 100%, 10%);
+  }
+
+  header.scrolled {
+    height: 5rem;
+    background-color: white;
+    color: black;
+    border-color: hsla(0, 0%, 0%, 10%);
+  }
+
+  .logo {
+    height: 6rem;
+  }
+
+  .scrolled .logo {
+    height: 4rem;
+  }
 </style>
+
+<script>
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+    header?.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>

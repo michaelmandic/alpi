@@ -7,12 +7,16 @@ const currentYear = new Date().getFullYear();
 <footer class="w-full flex flex-col justify-center items-center">
   <div class="bg-blue-main text-white w-full">
     <div class="max-w-[80rem] w-full mx-auto px-6 flex flex-col">
-      <h2 class="text-4xl pt-8">ALPI</h2>
-      <p class="text-2xl">NAJBOLJE PLJESKAVICE U ŽITIŠTU</p>
-      <p class="opacity-80 pt-4">
-        Zdravka Čelara BB<br />Žitište 23210, Srbija<br />+381 64 3553694<br
-        />kontakt@alpi.rs
-      </p>
+      <div class="flex flex-col md:flex-row justify-between gap-4 pt-8 pb-4">
+        <div>
+          <h2 class="text-4xl">ALPI</h2>
+          <p class="text-2xl">NAJBOLJE PLJESKAVICE U ŽITIŠTU</p>
+        </div>
+        <p class="opacity-80 md:text-end">
+          Zdravka Čelara BB<br />Žitište 23210, Srbija<br />+381 64 3553694<br
+          />kontakt@alpi.rs
+        </p>
+      </div>
       <Mountains width={100} class="transform translate-y-[1px] self-end" />
     </div>
   </div>
@@ -20,3 +24,9 @@ const currentYear = new Date().getFullYear();
     <small>© {currentYear} Alpi.</small>
   </div>
 </footer>
+
+<style>
+  h2 {
+    font-family: 'Barlow Condensed';
+  }
+</style>
